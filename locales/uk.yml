@@ -1,0 +1,76 @@
+home:
+  categories:
+    newestTools: 'Новые инструменты'
+    favoriteTools: 'Избранное'
+    allTools: 'Все инструменты'
+    favoritesDndToolTip: 'Перетащите для изменения порядка'
+  subtitle: 'Помощь разработчикам и IT-специалистам'
+  toggleMenu: 'Показать/скрыть меню'
+  home: 'Главная'
+  uiLib: 'UI библиотека'
+  support: 'Поддержать разработку IT-Tools'
+  buyMeACoffee: 'Поддержать'
+  follow:
+    title: 'Подписывайтесь'
+    p1: 'Поставьте звезду на GitHub'
+    githubRepository: 'GitHub репозиторий'
+    p2: 'Следите за нами в'
+    twitterXAccount: 'X IT-Tools'
+    thankYou: 'Спасибо за поддержку!'
+  nav:
+    github: 'GitHub репозиторий'
+    githubRepository: 'GitHub репозиторий'
+    twitterX: 'Twitter'
+    twitterXAccount: 'X IT-Tools'
+    about: 'О IT-Tools'
+    aboutLabel: 'О программе'
+    darkMode: 'Темный режим'
+    lightMode: 'Светлый режим'
+    mode: 'Режим отображения'
+
+about:
+  content: >
+    # О IT-Tools
+
+    IT-Tools создан разработчиком [Corentin Thomasset](https://corentin.tech) с любовью. Это набор полезных инструментов для разработчиков и IT-специалистов.
+    Если программа вам помогла, поделитесь с друзьями и добавьте в закладки!
+
+    IT-Tools абсолютно бесплатен и имеет открытый исходный код (лицензия GPL-3.0), но требует средств на хостинг и оплату домена.
+    Если вы хотите поддержать мой труд и помочь добавить новые инструменты — поддержите меня.
+
+    ## Технологии
+    IT-Tools разработан на Vue 3 + Naive UI, хостинг — Vercel.
+    Полный список библиотек в файле package.json.
+
+    ## Найден баг? Не хватает инструмента?
+    Предложите новые функции или сообщите об ошибках в Issues на GitHub.
+
+404:
+  notFound: '404 Страница не найдена'
+  sorry: 'Извините, этой страницы не существует'
+  maybe: 'Попробуйте обновить страницу'
+  backHome: 'На главную'
+
+favoriteButton:
+  remove: 'Удалить из избранного'
+  add: 'Добавить в избранное'
+
+toolCard:
+  new: 'Новое'
+
+search:
+  label: 'Поиск'
+
+tools:
+  categories:
+    favorite-tools: 'Избранное'
+    crypto: 'Шифрование'
+    converter: 'Конвертеры'
+    web: 'Веб'
+    images and videos: 'Изображения и видео'
+    development: 'Разработка'
+    network: 'Сеть'
+    math: 'Математика'
+    measurement: 'Измерение'
+    text: 'Текст'
+    data: 'Данные'

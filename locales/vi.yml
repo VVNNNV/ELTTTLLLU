@@ -1,0 +1,80 @@
+home:
+  categories:
+    newestTools: 'Công cụ mới nhất'
+    favoriteTools: 'Yêu thích của tôi'
+    allTools: 'Tất cả công cụ'
+    favoritesDndToolTip: 'Kéo thả để sắp xếp lại danh sách yêu thích'
+  subtitle: 'Hỗ trợ nhà phát triển và người làm việc IT'
+  toggleMenu: 'Bật/tắt menu'
+  home: 'Trang chủ'
+  uiLib: 'Thư viện UI'
+  support: 'Hỗ trợ phát triển công cụ IT'
+  buyMeACoffee: 'Ủng hộ'
+  follow:
+    title: 'Theo dõi chúng tôi'
+    p1: 'Đánh giá Star cho chúng tôi'
+    githubRepository: 'Kho GitHub'
+    p2: 'Theo dõi'
+    twitterXAccount: 'Tài khoản X của IT-Tools'
+    thankYou: 'Cảm ơn sự hỗ trợ của bạn!'
+  nav:
+    github: 'Kho GitHub'
+    githubRepository: 'Kho GitHub'
+    twitterX: 'Tài khoản Twitter'
+    twitterXAccount: 'Tài khoản X của IT-Tools'
+    about: 'Về IT-Tools'
+    aboutLabel: 'Về'
+    darkMode: 'Chế độ tối'
+    lightMode: 'Chế độ sáng'
+    mode: 'Chế độ hiển thị'
+
+about:
+  content: >
+    # Về IT-Tools
+
+    IT-Tools được phát triển bởi [Corentin Thomasset](https://corentin.tech) với tình yêu,
+    tập hợp các công cụ hữu ích cho nhà phát triển và người làm việc IT.
+    Nếu hữu ích, hãy chia sẻ cho bạn bè và lưu vào bookmark!
+
+    IT-Tools hoàn toàn miễn phí và mã nguồn mở (giấy phép GPL-3.0),
+    nhưng cần chi phí cho máy chủ và tên miền.
+    Nếu bạn muốn hỗ trợ công việc của tôi, hãy cân nhắc [Ủng hộ tôi](https://www.buymeacoffee.com/cthmsst).
+
+    ## Công nghệ
+    IT-Tools được xây dựng bằng Vue.js (Vue 3) và thư viện Naive UI,
+    được lưu trữ bởi Vercel.
+    Danh sách thư viện đầy đủ có trong tệp package.json.
+
+    ## Phát hiện lỗi? Thiếu công cụ?
+    Nếu chưa có công cụ bạn cần, hãy tạo yêu cầu trên GitHub Issues.
+    Nếu phát hiện lỗi, hãy báo cáo để chúng tôi cải thiện sớm.
+
+404:
+  notFound: '404 Không tìm thấy trang'
+  sorry: 'Xin lỗi, trang này không tồn tại'
+  maybe: 'Có thể do cache, hãy thử làm mới trang?'
+  backHome: 'Quay lại trang chủ'
+
+favoriteButton:
+  remove: 'Bỏ yêu thích'
+  add: 'Thêm vào yêu thích'
+
+toolCard:
+  new: 'Mới'
+
+search:
+  label: 'Tìm kiếm công cụ'
+
+tools:
+  categories:
+    favorite-tools: 'Yêu thích của tôi'
+    crypto: 'Mã hóa & Bảo mật'
+    converter: 'Chuyển đổi'
+    web: 'Web'
+    images and videos: 'Hình ảnh & Video'
+    development: 'Phát triển'
+    network: 'Mạng'
+    math: 'Toán học'
+    measurement: 'Đo lường'
+    text: 'Văn bản'
+    data: 'Dữ liệu'

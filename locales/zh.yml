@@ -1,0 +1,77 @@
+home:
+  categories:
+    newestTools: '最新工具'
+    favoriteTools: '我的收藏'
+    allTools: '全部工具'
+    favoritesDndToolTip: '拖动即可调整收藏顺序'
+  subtitle: '为开发者与IT工作者打造的效率工具箱'
+  toggleMenu: '展开/收起菜单'
+  home: '首页'
+  uiLib: 'UI组件库'
+  support: '支持项目发展'
+  buyMeACoffee: '赞助作者'
+  follow:
+    title: '关注我们'
+    p1: '欢迎点亮 Star'
+    githubRepository: 'GitHub 仓库'
+    p2: '关注我们的'
+    twitterXAccount: 'IT-Tools X 账号'
+    thankYou: '感谢您的支持！'
+  nav:
+    github: 'GitHub 仓库'
+    githubRepository: 'GitHub 仓库'
+    twitterX: 'Twitter 账号'
+    twitterXAccount: 'IT-Tools X 账号'
+    about: '关于 IT-Tools'
+    aboutLabel: '关于'
+    darkMode: '深色模式'
+    lightMode: '浅色模式'
+    mode: '显示模式'
+
+about:
+  content: >
+    # 关于 IT-Tools
+
+    IT-Tools 由 [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=about) 开发，专为开发者与 IT 从业者打造的实用工具集。
+    如果对你有帮助，欢迎分享给朋友并加入收藏！
+
+    IT-Tools 永久免费、完全开源（GPL-3.0 协议），服务器与域名需要持续维护。
+    如果你认可本项目，希望支持作者开发更多工具，欢迎通过 [赞助链接](https://www.buymeacoffee.com/cthmsst) 支持。
+
+    ## 技术栈
+    基于 Vue 3 + Naive UI 构建，由 Vercel 提供托管与持续部署服务。
+    项目依赖众多优秀开源库，完整列表可查看仓库中的 [package.json](https://github.com/CorentinTh/it-tools/blob/main/package.json)。
+
+    ## 反馈与建议
+    缺少你需要的工具？欢迎在 GitHub [提交功能建议](https://github.com/CorentinTh/it-tools/issues/new/choose)。
+    发现 Bug 或使用异常？欢迎在 GitHub [提交问题反馈](https://github.com/CorentinTh/it-tools/issues/new/choose)。
+
+404:
+  notFound: '404 页面未找到'
+  sorry: '抱歉，你访问的页面不存在'
+  maybe: '可能是缓存问题，试试强制刷新页面？'
+  backHome: '返回首页'
+
+favoriteButton:
+  remove: '取消收藏'
+  add: '加入收藏'
+
+toolCard:
+  new: '新'
+
+search:
+  label: '搜索工具'
+
+tools:
+  categories:
+    favorite-tools: '我的收藏'
+    crypto: '加密安全'
+    converter: '格式转换'
+    web: '网页开发'
+    images and videos: '图片视频'
+    development: '开发工具'
+    network: '网络工具'
+    math: '数学计算'
+    measurement: '单位换算'
+    text: '文本处理'
+    data: '数据处理'
