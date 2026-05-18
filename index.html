@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pic Smaller – Compress JPEG, PNG, WEBP, AVIF, SVG and GIF images intelligently</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo-new.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Optimization -->
+  <title>PicUn tu - 智能图片压缩工具 | 免费在线压缩 JPEG, PNG, WEBP, AVIF, SVG, GIF</title>
+  <meta name="description"
+    content="PicUn tu 是一款专业且免费的在线图片压缩工具。支持多种格式（JPEG, PNG, WEBP, AVIF, SVG, GIF）的智能压缩，在保持画质的同时极大地减小文件体积，提升网站加载速度。" />
+  <meta name="keywords" content="PicUn tu, 图片压缩, 在线压缩, JPEG压缩, PNG压缩, WEBP压缩, 免费工具, 图片优化, 减小图片大小" />
+  <meta name="author" content="PicUn tu" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tttia.com//" />
+  <meta property="og:title" content="PicUn tu - 智能图片压缩工具" />
+  <meta property="og:description" content="专业且免费的在线图片压缩工具，支持多种格式智能压缩。" />
+  <meta property="og:image" content="/logo-new.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tttia.com//" />
+  <meta property="twitter:title" content="PicUn tu - 智能图片压缩工具" />
+  <meta property="twitter:description" content="专业且免费的在线图片压缩工具，支持多种格式智能压缩。" />
+  <meta property="twitter:image" content="/logo-new.png" />
+
+  <script>
+    // Initialize theme before page load to prevent flicker
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

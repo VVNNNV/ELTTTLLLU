@@ -2,7 +2,7 @@ import { Button, Divider, Dropdown, Flex, Space, Typography } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
-import { GithubOutlined, MenuOutlined, HomeOutlined } from "@ant-design/icons";
+import { GithubOutlined, MenuOutlined, HomeOutlined, SunOutlined, MoonOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
 import { changeLang, langList } from "@/locale";
 import { homeState } from "@/states/home";
@@ -36,6 +36,14 @@ const Header = observer(() => {
         >
           <HomeOutlined />
         </Typography.Link>
+
+        {/* 暗黑模式切换 */}
+        <Button
+          type="text"
+          icon={gstate.theme === 'dark' ? <SunOutlined /> : <MoonOutlined />}
+          onClick={() => gstate.setTheme(gstate.theme === 'dark' ? 'light' : 'dark')}
+          title={gstate.theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        />
 
         <Dropdown
           menu={{

@@ -13,7 +13,7 @@ export const Logo = observer(({ title = "PicUn tu", showImage = true }: LogoProp
   return (
     <div
       className={style.container}
-      onClick={() => window.open("tttia.com", "_blank")}
+      onClick={() => window.open("https://tttia.com/", "_blank")}
       style={{ cursor: "pointer" }}
     >
       {showImage && (
