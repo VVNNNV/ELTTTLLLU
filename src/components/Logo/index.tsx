@@ -1,6 +1,7 @@
 import { Typography } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
+import logoImg from "@/assets/logo.png";
 
 interface LogoProps {
   iconSize?: number;
@@ -18,7 +19,7 @@ export const Logo = observer(({ iconSize = 42, title = "PicUn tu" }: LogoProps) 
       aria-label="点击 PicUn tu Logo 返回首页"
     >
       <img
-        src="/logo-new.png"
+        src={logoImg}
         width={iconSize}
         height={iconSize}
         alt="PicUn tu 图片压缩工具 Logo"
