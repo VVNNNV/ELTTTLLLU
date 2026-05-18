@@ -9,18 +9,22 @@ interface LogoProps {
   showImage?: boolean;
 }
 
-export const Logo = observer(({ title = "PicCompress", showImage = true }: LogoProps) => {
+export const Logo = observer(({ title = "PicUn tu", showImage = true }: LogoProps) => {
   return (
-    <div className={style.container}>
+    <div 
+      className={style.container} 
+      onClick={() => window.open("https://tttai.eu.cc", "_blank")}
+      style={{ cursor: "pointer" }}
+    >
       {showImage && (
         <img 
           src={logoImg} 
-          alt="Pic Smaller Logo" 
+          alt="PicUn tu Logo" 
           className={style.logoImage}
           title={title}
         />
       )}
-      {!showImage && <Typography.Text>{title}</Typography.Text>}
+      <Typography.Text style={{ fontWeight: 'bold', fontSize: '18px' }}>{title}</Typography.Text>
     </div>
   );
 });
