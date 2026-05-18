@@ -17,7 +17,7 @@ export const Logo = observer(({ title = "PicUn tu", showImage = true }: LogoProp
       {showImage && (
         <img 
           src={logoImg} 
-          alt="PicUn tu Logo" 
+          alt="Logo" 
           className={style.logoImage}
           title={title}
         />

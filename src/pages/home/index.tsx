@@ -2,7 +2,7 @@ import { Button, Divider, Dropdown, Flex, Space, Typography } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
-import { GithubOutlined, MenuOutlined, HomeOutlined, SunOutlined, MoonOutlined } from "@ant-design/icons";
+import { GithubOutlined, MenuOutlined, SunOutlined, MoonOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
 import { changeLang, langList } from "@/locale";
 import { homeState } from "@/states/home";
@@ -26,16 +26,16 @@ const Header = observer(() => {
 
   return (
     <Flex align="center" justify="space-between" className={style.header}>
-      <Logo title="PicUn tu" />
+      <Logo />
       <Space>
-        {/* 首页图标跳转 */}
-        <Typography.Link
-          className={style.github}
+        {/* 首页图标跳转 - 替换为机器人图片 */}
+        <div 
           onClick={() => window.open("http://www.tttia.com", "_blank")}
+          style={{ cursor: "pointer", display: 'flex', alignItems: 'center' }}
           title="Go to Home"
         >
-          <HomeOutlined />
-        </Typography.Link>
+          <img src="/logo-new.png" style={{ height: '24px', width: 'auto' }} alt="Home" />
+        </div>
 
         {/* 暗黑模式切换 */}
         <Button
