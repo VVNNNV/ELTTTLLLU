@@ -11,15 +11,15 @@ interface LogoProps {
 
 export const Logo = observer(({ title = "PicUn tu", showImage = true }: LogoProps) => {
   return (
-    <div 
-      className={style.container} 
-      onClick={() => window.open("https://tttai.eu.cc", "_blank")}
+    <div
+      className={style.container}
+      onClick={() => window.open("tttia.com", "_blank")}
       style={{ cursor: "pointer" }}
     >
       {showImage && (
-        <img 
-          src={logoImg} 
-          alt="PicUn tu Logo" 
+        <img
+          src={logoImg}
+          alt="PicUn tu Logo"
           className={style.logoImage}
           title={title}
         />
