@@ -5,7 +5,7 @@ import zhTW from "antd/locale/zh_TW";
 
 const localeData: LocaleData = {
   antLocale: zhTW,
-  logo: "圖小小",
+  logo: "PicUn tu",
   initial: "初始化中",
   previewHelp: "拖曳分割線對比壓縮效果：左邊是原始圖，右邊是壓縮圖",
   uploadCard: {
@@ -35,7 +35,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "無法更小，請調整參數後重試",
-    help: "Pic Smaller是一款大量圖片壓縮應用，對選項的修改將套用到所有圖片上",
+    help: "PicUn tu是一款大量圖片壓縮應用，對選項的修改將套用到所有圖片上",
     resizeLable: "調整圖片尺寸",
     jpegLable: "JPEG/WEBP參數",
     pngLable: "PNG參數",

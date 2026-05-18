@@ -1,0 +1,18 @@
+{
+  "name": "PicUn tu - 免费在线图片压缩与图片优化工具",
+  "short_name": "PicUn tu",
+  "description": "免费在线压缩与优化 JPEG、PNG、WEBP、AVIF、SVG、GIF 图片，提升网页加载速度与 SEO 表现。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff7df",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "/logo-new.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

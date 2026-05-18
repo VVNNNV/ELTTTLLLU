@@ -1,28 +1,29 @@
-import logoImg from "/logo-new.png";
+import { Typography } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 
 interface LogoProps {
+  iconSize?: number;
   title?: string;
-  showImage?: boolean;
 }
 
-export const Logo = observer(({ title = "PicUn tu", showImage = true }: LogoProps) => {
+const HOME_URL = "https://www.tttia.com";
+
+export const Logo = observer(({ iconSize = 42, title = "PicUn tu" }: LogoProps) => {
   return (
-    <div 
-      className={style.container} 
-      onClick={() => window.open("https://tttai.eu.cc", "_blank")}
-      style={{ cursor: "pointer" }}
+    <a
+      className={style.container}
+      href={HOME_URL}
+      title="返回 PicUn tu 首页"
+      aria-label="点击 PicUn tu Logo 返回首页"
     >
-      {showImage && (
-        <img 
-          src={logoImg} 
-          alt="Logo" 
-          className={style.logoImage}
-          title={title}
-        />
-      )}
-      <span>{title}</span>
-    </div>
+      <img
+        src="/logo-new.png"
+        width={iconSize}
+        height={iconSize}
+        alt="PicUn tu 图片压缩工具 Logo"
+      />
+      <Typography.Text>{title}</Typography.Text>
+    </a>
   );
 });

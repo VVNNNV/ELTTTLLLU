@@ -1,4 +1,4 @@
-import { ConfigProvider, App as AntApp, theme } from "antd";
+import { ConfigProvider, App as AntApp } from "antd";
 import { observer } from "mobx-react-lite";
 import { gstate } from "./global";
 import { ContextAction } from "./ContextAction";
@@ -26,12 +26,11 @@ export const App = observer(() => {
     <ConfigProvider
       locale={gstate.locale?.antLocale}
       theme={{
-        algorithm: gstate.theme === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm,
         token: {
-          borderRadius: 4,
-          colorPrimary: "#ff4d4f", // 使用红色系匹配新 Logo
-          colorLink: "#ff4d4f",
-          colorSuccess: "#52c41a",
+          borderRadius: 0,
+          colorPrimary: "#b77900",
+          colorLink: "#b77900",
+          colorSuccess: "#b77900",
         },
       }}
     >
