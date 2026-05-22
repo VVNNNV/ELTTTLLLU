@@ -28,9 +28,9 @@ export const App = observer(() => {
       theme={{
         token: {
           borderRadius: 4,
-          colorPrimary: "#4a90c4",
-          colorLink: "#4a90c4",
-          colorSuccess: "#4a90c4",
+          colorPrimary: "#C5960B",
+          colorLink: "#C5960B",
+          colorSuccess: "#C5960B",
         },
       }}
     >

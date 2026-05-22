@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#5DA8D6"/>
-      <stop offset="100%" style="stop-color:#3A78A8"/>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A30D"/>
+      <stop offset="100%" style="stop-color:#8A6508"/>
     </linearGradient>
   </defs>
-  <rect x="10" y="8" width="80" height="84" rx="10" fill="url(#cyanGrad)"/>
+  <rect x="10" y="8" width="80" height="84" rx="10" fill="url(#goldGrad)"/>
   <circle cx="50" cy="38" r="18" fill="none" stroke="#fff" stroke-width="3"/>
   <path d="M32 68c0-10 8-18 18-18s18 8 18 18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
 </svg>
