@@ -6,20 +6,20 @@
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-decoration: none;
-  color: #C5960B;
+  color: #4a90c4;
   transition: opacity 0.2s;
   &:hover {
-    opacity: 0.85;
+    opacity: 0.8;
   }
 }
 .icon {
   width: 28px;
   height: 28px;
-  color: #C5960B;
+  color: #4a90c4;
   flex-shrink: 0;
 }
 .text {
   font-size: 22px;
-  color: #C5960B !important;
+  color: #4a90c4 !important;
   letter-spacing: 1px;
 }
