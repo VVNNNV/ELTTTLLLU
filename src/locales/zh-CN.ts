@@ -3,8 +3,8 @@ import zhCN from "antd/locale/zh_CN";
 
 const localeData: LocaleData = {
   antLocale: zhCN,
-  logo: "图小小",
-  initial: "初始化中",
+  logo: "PicUntu",
+  initial: "初始化中...",
   previewHelp: "拖动分割线对比压缩效果：左边是原始图，右边是压缩图",
   uploadCard: {
     title: "选取图片到这里，支持拖拽图片和文件夹",
@@ -33,7 +33,7 @@ const localeData: LocaleData = {
   },
   optionPannel: {
     failTip: "无法更小，请调整参数后重试",
-    help: "图小小是一款批量图片压缩应用程序，对选项的修改将应用到所有图片上",
+    help: "PicUntu 是一款批量图片压缩应用程序，对选项的修改将应用到所有图片上",
     resizeLable: "调整图片尺寸",
     jpegLable: "JPEG/WEBP参数",
     pngLable: "PNG参数",

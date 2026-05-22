@@ -11,12 +11,12 @@
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #078249;
-    background-color: #f9f9f9;
+    border-color: #C5960B;
+    background-color: #fefaf0;
   }
 
   &:active {
-    background-color: darken($color: #f9f9f9, $amount: 3);
+    background-color: #fdf3d0;
   }
 
   > input {
@@ -24,8 +24,8 @@
   }
 
   &.active {
-    border-color: #078249;
-    background-color: rgba(7, 130, 73, 0.05);
+    border-color: #C5960B;
+    background-color: rgba(197, 150, 11, 0.05);
   }
 }
 
@@ -37,7 +37,7 @@
     width: 64px;
     height: 64px;
     path {
-      fill: #078249;
+      fill: #C5960B;
       transition: fill 0.3s ease;
     }
   }
@@ -62,14 +62,14 @@
   
   .pasteHint {
     margin-top: 24px;
-    color: #078249;
+    color: #C5960B;
     text-align: center;
     padding: 12px 24px;
-    background-color: rgba(7, 130, 73, 0.08);
-    border-radius: 0;
+    background-color: rgba(197, 150, 11, 0.08);
+    border-radius: 4px;
     font-size: 14px;
     line-height: 1.5;
-    border-left: 4px solid #078249;
+    border-left: 4px solid #C5960B;
   }
 }
 

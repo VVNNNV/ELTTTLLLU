@@ -1,4 +1,4 @@
-$border: 1px solid #dfdfdf;
+$border: 1px solid #e8d5a3;
 
 .sidePc {
   width: 380px;
@@ -17,11 +17,11 @@ $border: 1px solid #dfdfdf;
   $h1: 60px;
   height: 100%;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #fffdf5;
   > div:nth-child(1) {
     height: $h1;
     border-bottom: $border;
-    background-color: #fafafa;
+    background-color: #fefaf0;
     padding: 0 16px;
   }
   > div:nth-child(2) {
