@@ -5,9 +5,252 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pic Smaller – Compress JPEG, PNG, WEBP, AVIF, SVG and GIF images intelligently</title>
+    <style>
+      /* ===== 极简科技风 Splash Screen ===== */
+      #splash-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #0a0e14;
+        font-family: 'SF Mono', 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+      }
+      #splash-screen.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .splash-decor {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      .splash-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(7,130,73,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(7,130,73,0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        animation: gridPulse 4s ease-in-out infinite;
+      }
+      @keyframes gridPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+      .splash-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(7,130,73,0.08) 0%, transparent 70%);
+        animation: glowBreath 3s ease-in-out infinite;
+      }
+      @keyframes glowBreath {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+        50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+      }
+      .splash-core {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+      .splash-logo {
+        width: 48px;
+        height: 48px;
+        border: 2px solid rgba(7,130,73,0.5);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: logoBeat 2s ease-in-out infinite;
+      }
+      @keyframes logoBeat {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(7,130,73,0); }
+        50% { box-shadow: 0 0 20px 4px rgba(7,130,73,0.2); }
+      }
+      .splash-logo svg {
+        width: 24px;
+        height: 24px;
+        stroke: #078249;
+        fill: none;
+        stroke-width: 1.5;
+      }
+      .splash-stages {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        min-width: 280px;
+      }
+      .splash-stage {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        color: rgba(255,255,255,0.25);
+        letter-spacing: 0.5px;
+        transition: color 0.5s ease;
+      }
+      .splash-stage.active {
+        color: rgba(255,255,255,0.9);
+      }
+      .splash-stage.done {
+        color: #078249;
+      }
+      .splash-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: rgba(255,255,255,0.15);
+        transition: all 0.5s ease;
+      }
+      .splash-stage.active .splash-dot {
+        background: #078249;
+        box-shadow: 0 0 8px rgba(7,130,73,0.6);
+        animation: dotPulse 1.2s ease-in-out infinite;
+      }
+      .splash-stage.done .splash-dot {
+        background: #078249;
+        box-shadow: 0 0 4px rgba(7,130,73,0.3);
+      }
+      @keyframes dotPulse {
+        0%, 100% { box-shadow: 0 0 6px rgba(7,130,73,0.4); }
+        50% { box-shadow: 0 0 14px rgba(7,130,73,0.8); }
+      }
+      .splash-done-icon {
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        font-size: 12px;
+        color: #078249;
+        display: inline-flex;
+      }
+      .splash-stage.done .splash-done-icon {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .splash-progress-bar {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        overflow: hidden;
+      }
+      .splash-progress-fill {
+        height: 100%;
+        background: #078249;
+        width: 0%;
+        transition: width 0.4s ease;
+      }
+      @media (max-width: 480px) {
+        .splash-stages { min-width: 240px; gap: 12px; }
+        .splash-stage { font-size: 12px; }
+        .splash-core { gap: 24px; }
+        .splash-logo { width: 40px; height: 40px; border-radius: 8px; }
+        .splash-logo svg { width: 20px; height: 20px; }
+        .splash-progress-bar { width: 160px; bottom: 36px; }
+      }
+    </style>
   </head>
   <body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+      <div class="splash-decor">
+        <div class="splash-grid"></div>
+        <div class="splash-glow"></div>
+      </div>
+      <div class="splash-core">
+        <div class="splash-logo">
+          <svg viewBox="0 0 24 24">
+            <polyline points="21,3 9,3 3,9 3,21 21,21 21,3"/>
+            <line x1="9" y1="3" x2="9" y2="9"/>
+            <line x1="3" y1="9" x2="9" y2="9"/>
+            <circle cx="15" cy="13" r="3"/>
+            <polyline points="13,11 8,16 10,18"/>
+          </svg>
+        </div>
+        <div class="splash-stages">
+          <div class="splash-stage" id="stage-1">
+            <span class="splash-dot"></span>
+            <span class="splash-label">
+              系统初始化
+              <span class="splash-done-icon">&#10003;</span>
+            </span>
+          </div>
+          <div class="splash-stage" id="stage-2">
+            <span class="splash-dot"></span>
+            <span class="splash-label">
+              资源加载中
+              <span class="splash-done-icon">&#10003;</span>
+            </span>
+          </div>
+          <div class="splash-stage" id="stage-3">
+            <span class="splash-dot"></span>
+            <span class="splash-label">
+              构建页面
+              <span class="splash-done-icon">&#10003;</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="splash-progress-bar">
+        <div class="splash-progress-fill" id="splash-progress-fill"></div>
+      </div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      (function() {
+        var stages = [
+          { el: document.getElementById('stage-1'), delay: 300 },
+          { el: document.getElementById('stage-2'), delay: 800 },
+          { el: document.getElementById('stage-3'), delay: 1400 }
+        ];
+        var progressBar = document.getElementById('splash-progress-fill');
+        var splashScreen = document.getElementById('splash-screen');
+
+        function activateStage(index) {
+          if (index >= stages.length) return;
+          var stage = stages[index];
+          stage.el.classList.add('active');
+          progressBar.style.width = ((index + 1) / stages.length * 100) + '%';
+
+          setTimeout(function() {
+            stage.el.classList.remove('active');
+            stage.el.classList.add('done');
+            if (index + 1 < stages.length) {
+              activateStage(index + 1);
+            } else {
+              setTimeout(function() {
+                splashScreen.classList.add('hidden');
+                setTimeout(function() {
+                  if (splashScreen.parentNode) {
+                    splashScreen.parentNode.removeChild(splashScreen);
+                  }
+                }, 600);
+              }, 400);
+            }
+          }, 600 + Math.random() * 300);
+        }
+
+        activateStage(0);
+      })();
+    </script>
   </body>
 </html>
