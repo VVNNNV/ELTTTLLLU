@@ -2,8 +2,9 @@ $border: 1px solid #e8d5a3;
 
 .sidePc {
   width: 380px;
-  border-left: $border;
+  border-left: 1px solid rgba(197,150,11,0.12);
   flex-shrink: 0;
+  background-color: rgba(15,13,8,0.85);
 }
 
 .sidePad {
@@ -17,11 +18,11 @@ $border: 1px solid #e8d5a3;
   $h1: 60px;
   height: 100%;
   overflow: hidden;
-  background-color: #fffdf5;
+  background-color: rgba(15,13,8,0.85);
   > div:nth-child(1) {
     height: $h1;
-    border-bottom: $border;
-    background-color: #fefaf0;
+    border-bottom: 1px solid rgba(197,150,11,0.1);
+    background-color: rgba(20,18,10,0.6);
     padding: 0 16px;
   }
   > div:nth-child(2) {

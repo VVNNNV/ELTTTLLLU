@@ -3,20 +3,21 @@
   position: relative;
   cursor: pointer;
   user-select: none;
-  background-color: #f7f7f7;
-  border: 2px dashed #e0e0e0;
+  background-color: rgba(25,22,12,0.7);
+  border: 2px dashed rgba(197,150,11,0.2);
+  border-radius: 12px;
   overflow: hidden;
   box-sizing: border-box;
   min-height: 320px;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #C5960B;
-    background-color: #fefaf0;
+    border-color: rgba(197,150,11,0.5);
+    background-color: rgba(30,26,14,0.8);
   }
 
   &:active {
-    background-color: #fdf3d0;
+    background-color: rgba(35,30,16,0.85);
   }
 
   > input {
@@ -25,7 +26,7 @@
 
   &.active {
     border-color: #C5960B;
-    background-color: rgba(197, 150, 11, 0.05);
+    background-color: rgba(197, 150, 11, 0.06);
   }
 }
 
@@ -48,12 +49,12 @@
     font-weight: 600;
     text-align: center;
     padding: 0 16px;
-    color: #333;
+    color: rgba(230,210,160,0.9);
   }
   
   > div:nth-child(3) {
     margin-top: 12px;
-    color: #666;
+    color: rgba(197,150,11,0.6);
     text-align: center;
     padding: 0 16px;
     line-height: 1.6;

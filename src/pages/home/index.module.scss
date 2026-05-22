@@ -3,14 +3,57 @@ $border: 1px solid #e8d5a3;
 
 .container {
   height: 100vh;
-  background: linear-gradient(135deg, #fef9ed 0%, #fdf3d0 50%, #fef9ed 100%);
+  position: relative;
+  background-color: #0f0e0a;
+  background-image:
+    /* 底部金色光晕 */
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(197,150,11,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 20% 0%, rgba(197,150,11,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 80% 0%, rgba(197,150,11,0.06) 0%, transparent 50%),
+    /* 细微网格 */
+    linear-gradient(rgba(197,150,11,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197,150,11,0.03) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    50px 50px,
+    50px 50px;
+  background-position: 0 0;
+  overflow: hidden;
+
+  /* 装饰性几何图形 */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(197,150,11,0.08);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -60px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(197,150,11,0.06);
+    border-radius: 40px;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
 }
 
 .header {
-  background: linear-gradient(180deg, #fffdf5 0%, #fef9ed 100%);
+  background: linear-gradient(180deg, rgba(25,23,15,0.95) 0%, rgba(20,18,10,0.9) 100%);
+  backdrop-filter: blur(10px);
   height: $headerHeight;
   padding: 0 16px;
-  border-bottom: $border;
+  border-bottom: 1px solid rgba(197,150,11,0.12);
 }
 
 .homeBtn {
@@ -111,8 +154,8 @@ $border: 1px solid #e8d5a3;
   flex-grow: 1;
   > div:nth-child(1) {
     height: $h1;
-    border-bottom: $border;
-    background-color: #fefaf0;
+    border-bottom: 1px solid rgba(197,150,11,0.1);
+    background-color: rgba(20,18,10,0.6);
     padding: 0 16px;
   }
   > div:nth-child(2) {
@@ -121,18 +164,21 @@ $border: 1px solid #e8d5a3;
   }
   > div:nth-child(3) {
     height: $h3;
-    border-top: $border;
+    border-top: 1px solid rgba(197,150,11,0.1);
     padding: 0 16px;
-    background-color: #fefaf0;
+    background-color: rgba(20,18,10,0.6);
   }
 }
 
 a.github {
   cursor: pointer;
-  color: #000;
+  color: rgba(197,150,11,0.7);
   margin-left: 16px;
   span {
     font-size: 24px;
+  }
+  &:hover {
+    color: #C5960B;
   }
 }
 
