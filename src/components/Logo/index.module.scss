@@ -1,32 +1,8 @@
 .container {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   line-height: 1;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: #8a5a00;
-  cursor: pointer;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-
-  &:hover {
-    opacity: 0.86;
-    color: #b77900;
-    transform: translateY(-1px);
-  }
-
-  img {
-    display: block;
-    flex: 0 0 auto;
-    object-fit: contain;
-    border-radius: 50%;
-  }
-
+  font-weight: 600;
   span {
     font-size: 22px;
-    letter-spacing: 0.2px;
-    color: currentColor;
-    white-space: nowrap;
   }
 }

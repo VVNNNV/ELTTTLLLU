@@ -3,7 +3,7 @@ import trTR from "antd/locale/tr_TR";
 
 const localeData: LocaleData = {
   antLocale: trTR,
-  logo: "PicUn tu",
+  logo: "Pic Smaller",
   initial: "Başlatılıyor",
   previewHelp:
     "Sıkıştırma etkisini karşılaştırmak için bölme çizgisini sürükleyin: soldaki orijinal görüntü, sağdaki sıkıştırılmış görüntü",
@@ -35,7 +35,7 @@ const localeData: LocaleData = {
   optionPannel: {
     failTip:
       "Daha küçük olamaz, lütfen parametreleri ayarlayın ve tekrar deneyin.",
-    help: "PicUn tu, toplu resim sıkıştırma uygulamasıdır. Seçeneklerde yapılan değişiklikler tüm resimlere uygulanacaktır.",
+    help: "Pic Smaller, toplu resim sıkıştırma uygulamasıdır. Seçeneklerde yapılan değişiklikler tüm resimlere uygulanacaktır.",
     resizeLable: "Görüntüyü yeniden boyutlandır",
     jpegLable: "JPEG/WEBP parametreleri",
     pngLable: "PNG parametreleri",

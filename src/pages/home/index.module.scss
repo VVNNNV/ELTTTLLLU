@@ -1,21 +1,16 @@
 $headerHeight: 60px;
-$border: 1px solid rgba(180, 124, 0, 0.22);
+$border: 1px solid #dfdfdf;
 
 .container {
-  min-height: 100vh;
   height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(255, 247, 213, 0.98), transparent 34%),
-    linear-gradient(135deg, #fff7df 0%, #f7d774 45%, #d4af37 100%);
+  background-color: #f5f5f5;
 }
 
 .header {
-  background: rgba(255, 250, 235, 0.94);
-  backdrop-filter: blur(10px);
+  background-color: #fff;
   height: $headerHeight;
   padding: 0 16px;
   border-bottom: $border;
-  box-shadow: 0 4px 18px rgba(141, 92, 0, 0.12);
 }
 
 .locale {
@@ -33,7 +28,7 @@ $border: 1px solid rgba(180, 124, 0, 0.22);
     color: currentColor;
   }
   &:hover {
-    color: #b77900;
+    color: #1da565;
   }
 }
 
@@ -106,7 +101,7 @@ $border: 1px solid rgba(180, 124, 0, 0.22);
   > div:nth-child(1) {
     height: $h1;
     border-bottom: $border;
-    background: rgba(255, 250, 235, 0.86);
+    background-color: #fafafa;
     padding: 0 16px;
   }
   > div:nth-child(2) {
@@ -117,29 +112,16 @@ $border: 1px solid rgba(180, 124, 0, 0.22);
     height: $h3;
     border-top: $border;
     padding: 0 16px;
-    background: rgba(255, 250, 235, 0.86);
+    background-color: #fafafa;
   }
 }
 
 a.github {
   cursor: pointer;
-  color: #7a5200;
+  color: #000;
   margin-left: 16px;
   span {
     font-size: 24px;
-  }
-}
-
-.homeButton {
-  border: none;
-  background: linear-gradient(135deg, #d4af37 0%, #b77900 100%) !important;
-  color: #fff !important;
-  box-shadow: 0 4px 14px rgba(183, 121, 0, 0.28);
-  font-weight: 600;
-
-  &:hover {
-    background: linear-gradient(135deg, #e5c75a 0%, #a16400 100%) !important;
-    color: #fff !important;
   }
 }
 

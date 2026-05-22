@@ -2,7 +2,7 @@ import { Button, Divider, Dropdown, Flex, Space, Typography } from "antd";
 import style from "./index.module.scss";
 import { observer } from "mobx-react-lite";
 import { Logo } from "@/components/Logo";
-import { GithubOutlined, HomeOutlined, MenuOutlined } from "@ant-design/icons";
+import { GithubOutlined, MenuOutlined } from "@ant-design/icons";
 import { gstate } from "@/global";
 import { changeLang, langList } from "@/locale";
 import { homeState } from "@/states/home";
@@ -21,8 +21,6 @@ function getCurentLangStr(): string | undefined {
   return (findLang as any)?.label;
 }
 
-const HOME_URL = "https://www.tttia.com";
-
 const Header = observer(() => {
   const { isPC } = useResponse();
 
@@ -30,15 +28,6 @@ const Header = observer(() => {
     <Flex align="center" justify="space-between" className={style.header}>
       <Logo title={gstate.locale?.logo} />
       <Space>
-        <Button
-          className={style.homeButton}
-          type="primary"
-          icon={<HomeOutlined />}
-          href={HOME_URL}
-          title="访问 PicUn tu 首页"
-        >
-          首页
-        </Button>
         <Dropdown
           menu={{
             items: langList,
